@@ -2,7 +2,7 @@ export const movies = [
   {
     id: 1,
     title: 'Dune: Parte Dos',
-    image: 'https://images.unsplash.com/photo-1626814026160-2237a95fc380?q=80&w=800&auto=format&fit=crop',
+    image: 'https://upload.wikimedia.org/wikipedia/en/5/52/Dune_Part_Two_poster.jpeg',
     synopsis: 'Paul Atreides se une a los fremen de Arrakis para librar una guerra por el control del planeta y el futuro del universo.',
     classification: 'PG-13',
     rating: 8.4,
@@ -11,7 +11,7 @@ export const movies = [
   {
     id: 2,
     title: 'Oppenheimer',
-    image: 'https://images.unsplash.com/photo-1634084456600-e5e38634e741?q=80&w=800&auto=format&fit=crop',
+    image: 'https://upload.wikimedia.org/wikipedia/en/4/4a/Oppenheimer_%28film%29.jpg',
     synopsis: 'La historia de J. Robert Oppenheimer y su papel en el desarrollo de la bomba atómica durante la Segunda Guerra Mundial.',
     classification: 'R',
     rating: 8.5,
@@ -20,7 +20,7 @@ export const movies = [
   {
     id: 3,
     title: 'Spider-Man: Across the Spider-Verse',
-    image: 'https://images.unsplash.com/photo-1618652841013-60a91f9e0bc0?q=80&w=800&auto=format&fit=crop',
+    image: 'https://upload.wikimedia.org/wikipedia/en/b/b4/Spider-Man-_Across_the_Spider-Verse_poster.jpg',
     synopsis: 'Miles Morales viaja a través del multiverso y se reúne con Spider-Personas para enfrentar una nueva amenaza.',
     classification: 'PG',
     rating: 8.7,
@@ -29,8 +29,8 @@ export const movies = [
   {
     id: 4,
     title: 'Poor Things',
-    image: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=800&auto=format&fit=crop',
-    synopsis: 'La historia de Bella Baxter, una mujer traída de vuelta a la mano por un científico poco convencional.',
+    image: 'https://upload.wikimedia.org/wikipedia/en/f/f3/Poor_Things_poster.jpg',
+    synopsis: 'La historia de Bella Baxter, una mujer traída de vuelta a la vida por un científico poco convencional.',
     classification: 'R',
     rating: 7.9,
     schedule: ['12:00', '15:30', '19:00', '22:00'],
@@ -38,7 +38,7 @@ export const movies = [
   {
     id: 5,
     title: 'The Marvels',
-    image: 'https://images.unsplash.com/photo-1597665303164-3f16e6580879?q=80&w=800&auto=format&fit=crop',
+    image: 'https://upload.wikimedia.org/wikipedia/en/7/7a/The_Marvels_poster.jpg',
     synopsis: 'Carol Danvers, Kamala Khan y Monica Rambeau se unen cuando sus poderes se entrelazan inesperadamente.',
     classification: 'PG-13',
     rating: 6.2,
@@ -47,7 +47,7 @@ export const movies = [
   {
     id: 6,
     title: 'Barbie',
-    image: 'https://images.unsplash.com/photo-1624446661733-34245b6b78ac?q=80&w=800&auto=format&fit=crop',
+    image: 'https://upload.wikimedia.org/wikipedia/en/0/0b/Barbie_2023_poster.jpg',
     synopsis: 'Barbie y Ken viven en Barbie Land, un lugar perfecto, hasta que un viaje al mundo real los cambia todo.',
     classification: 'PG-13',
     rating: 7.0,
@@ -56,7 +56,7 @@ export const movies = [
   {
     id: 7,
     title: 'John Wick 4',
-    image: 'https://images.unsplash.com/photo-1567793827160-7222a8c6bd76?q=80&w=800&auto=format&fit=crop',
+    image: 'https://upload.wikimedia.org/wikipedia/en/d/d0/John_Wick_-_Chapter_4_promotional_poster.jpg',
     synopsis: 'John Wick continúa su lucha contra la Alta Mesa mientras nuevos enemigos aparecen en su camino.',
     classification: 'R',
     rating: 7.8,
@@ -65,7 +65,7 @@ export const movies = [
   {
     id: 8,
     title: 'Elemental',
-    image: 'https://images.unsplash.com/photo-1517604931442-47057c19e87f?q=80&w=800&auto=format&fit=crop',
+    image: 'https://upload.wikimedia.org/wikipedia/en/4/4d/Elemental_final_poster.jpg',
     synopsis: 'En una ciudad donde el fuego, el agua, el aire y la tierra conviven, una joven fogosa y un tipo acuático descubren algo en común.',
     classification: 'PG',
     rating: 7.1,

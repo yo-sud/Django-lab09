@@ -2,7 +2,7 @@ function MovieCard({ movie }) {
   return (
     <article className="movie-card">
       <div className="movie-card__poster">
-        <img src={movie.image} alt={`Poster de ${movie.title}`} />
+        <img src={movie.image} alt={`Poster de ${movie.title}`} loading="lazy" decoding="async" />
         <span className="movie-card__classification">{movie.classification}</span>
       </div>
       <div className="movie-card__info">
