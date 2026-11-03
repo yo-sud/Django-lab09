@@ -1,3 +1,5 @@
+import MovieCard from './MovieCard.jsx'
+
 function MovieList({ movies }) {
   return (
     <section className="movie-list">
