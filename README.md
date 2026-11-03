@@ -70,10 +70,10 @@ Cada componente tiene una única responsabilidad y no conoce el origen de los da
 
 | Componente | Responsabilidad | Props | Origen de los datos |
 |------------|-----------------|-------|---------------------|
-| `Header` | Mostrar el nombre del cine y la navegación principal | Ninguna | Datos propios del componente |
-| `Hero` | Mostrar el banner de la película destacada | `movie` (objeto película) | `App` le pasa `movies[0]` |
-| `MovieList` | Recorrer la cartelera con `.map()` y dibujar una tarjeta por película | `movies` (arreglo de películas) | `App` le pasa el arreglo `movies` |
-| `MovieCard` | Mostrar imagen, título, clasificación, valoración y horarios de una película | `movie` (objeto película) | `MovieList` le pasa cada elemento del arreglo |
+| `Header` | Mostrar el nombre del cine, la navegación y el contador de entradas | `tickets` (número) | `App` mantiene el estado de las entradas |
+| `Hero` | Mostrar el banner de la película destacada y el botón "Ver cartelera" | `movie` (objeto película) | `App` le pasa `movies[0]` |
+| `MovieList` | Buscar, filtrar y recorrer la cartelera con `.map()`; dibujar una tarjeta por película | `movies` (arreglo), `onBuy` (función) | `App` le pasa el arreglo y la función de compra |
+| `MovieCard` | Mostrar la película, permitir elegir horario y confirmar la compra | `movie` (objeto), `onBuy` (función) | `MovieList` le pasa cada película y la función |
 | `Footer` | Mostrar datos de contacto, dirección y derechos de autor | Ninguna | Datos propios del componente |
 
 ### Flujo de datos
@@ -82,14 +82,31 @@ Cada componente tiene una única responsabilidad y no conoce el origen de los da
 src/data/movies.js
         │
         ▼
-      App.jsx ──── props: movie ────▶ Hero.jsx
+      App.jsx ──── props: tickets ────▶ Header.jsx
         │
-        └──────── props: movies ───▶ MovieList.jsx
-                                          │
-                                          └── props: movie ──▶ MovieCard.jsx
+        ├──────── props: movie ──────▶ Hero.jsx
+        │
+        └──────── props: movies, onBuy ───▶ MovieList.jsx
+                                                │
+                                                └── props: movie, onBuy ──▶ MovieCard.jsx
 ```
 
-`App` es el único que conoce el archivo de datos. `Hero`, `MovieList` y `MovieCard` solo reciben lo que necesitan y no importan la fuente de datos.
+`App` es el único que conoce el archivo de datos y el estado de las entradas. `Header`, `Hero`, `MovieList` y `MovieCard` solo reciben lo que necesitan y no importan la fuente de datos.
+
+---
+
+## Interactividad
+
+La cartelera responde a las acciones del usuario:
+
+- **Buscador en vivo:** filtra las películas por título mientras se escribe.
+- **Filtros por clasificación:** botones para mostrar todas o solo `PG`, `PG-13` o `R`.
+- **Selección de horario:** cada tarjeta permite elegir uno de sus horarios y lo resalta.
+- **Compra de entrada:** el botón se habilita al elegir un horario, confirma la reserva en la tarjeta e incrementa el contador de entradas del encabezado.
+- **Estado vacío:** si la búsqueda no encuentra coincidencias, se muestra un mensaje en lugar de una lista vacía.
+- **Navegación suave:** el botón "Ver cartelera" del Hero y los enlaces del Header desplazan la página hasta la cartelera.
+
+El contador de entradas vive en `App` y se eleva como prop `tickets` hacia `Header`; la función `onBuy` viaja de `App` a `MovieList` y de ahí a `MovieCard`. Así el estado se mantiene en un solo lugar y los hijos solo notifican la acción.
 
 ---
 
@@ -149,6 +166,8 @@ Todas están declaradas en `package.json`. `node_modules` y `dist` se excluyen d
 4. **Un solo nodo raíz.** `App` devuelve un fragmento `<>...</>` que agrupa `Header`, `main` y `Footer`.
 5. **Estilos centralizados.** `src/styles/index.css` contiene los tokens de diseño y los estilos de todos los componentes; se importa una sola vez en `src/main.jsx`.
 6. **Errores documentados.** En `ERRORES_TIPICOS.md` se registran los tres errores provocados intencionalmente (`class` vs `className`, dos nodos raíz y falta de `key`) con su mensaje y su solución.
+7. **Estado elevado.** El contador de entradas vive en `App` con `useState` y baja como prop `tickets` a `Header`; la función `onBuy` se pasa por props hasta `MovieCard`. Los estados de búsqueda, filtro, horario y confirmación son locales a cada componente que los necesita.
+8. **Portadas locales.** Las ocho imágenes están en `public/posters/`, por lo que la cartelera no depende de servicios externos ni de límites de peticiones para mostrar las portadas.
 
 ---
 

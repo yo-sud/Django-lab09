@@ -371,6 +371,129 @@ img {
   font-size: 0.875rem;
 }
 
+/* ========================================
+   Interactividad
+   ======================================== */
+
+.header__tickets {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  background-color: rgba(229, 9, 20, 0.12);
+  color: var(--color-text);
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.hero__cta {
+  align-self: flex-start;
+  margin-top: 1.5rem;
+}
+
+.movie-list__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.movie-list__search {
+  flex: 1 1 240px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #2a2d36;
+  border-radius: var(--border-radius);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.9375rem;
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+.movie-list__search::placeholder {
+  color: var(--color-text-muted);
+}
+
+.movie-list__search:focus {
+  border-color: var(--color-accent);
+}
+
+.movie-list__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #2a2d36;
+  border-radius: 999px;
+  background-color: transparent;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.filter-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.filter-btn--active {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #ffffff;
+}
+
+.movie-list__empty {
+  padding: 3rem 1rem;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+}
+
+.time-btn {
+  padding: 0.35rem 0.7rem;
+  border: 1px solid #2a2d36;
+  border-radius: 6px;
+  background-color: transparent;
+  color: var(--color-text);
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition);
+}
+
+.time-btn:hover {
+  border-color: var(--color-accent);
+}
+
+.time-btn--active {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.movie-card__buy {
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 0.6rem;
+  font-size: 0.875rem;
+}
+
+.movie-card__buy:disabled {
+  background-color: #33363f;
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
