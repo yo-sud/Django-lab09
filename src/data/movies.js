@@ -2,7 +2,7 @@ export const movies = [
   {
     id: 1,
     title: 'Dune: Parte Dos',
-    image: 'https://upload.wikimedia.org/wikipedia/en/5/52/Dune_Part_Two_poster.jpeg',
+    image: '/posters/dune-parte-dos.jpg',
     synopsis: 'Paul Atreides se une a los fremen de Arrakis para librar una guerra por el control del planeta y el futuro del universo.',
     classification: 'PG-13',
     rating: 8.4,
@@ -11,7 +11,7 @@ export const movies = [
   {
     id: 2,
     title: 'Oppenheimer',
-    image: 'https://upload.wikimedia.org/wikipedia/en/4/4a/Oppenheimer_%28film%29.jpg',
+    image: '/posters/oppenheimer.jpg',
     synopsis: 'La historia de J. Robert Oppenheimer y su papel en el desarrollo de la bomba atómica durante la Segunda Guerra Mundial.',
     classification: 'R',
     rating: 8.5,
@@ -20,7 +20,7 @@ export const movies = [
   {
     id: 3,
     title: 'Spider-Man: Across the Spider-Verse',
-    image: 'https://upload.wikimedia.org/wikipedia/en/b/b4/Spider-Man-_Across_the_Spider-Verse_poster.jpg',
+    image: '/posters/spider-man-across-the-spider-verse.jpg',
     synopsis: 'Miles Morales viaja a través del multiverso y se reúne con Spider-Personas para enfrentar una nueva amenaza.',
     classification: 'PG',
     rating: 8.7,
@@ -29,7 +29,7 @@ export const movies = [
   {
     id: 4,
     title: 'Poor Things',
-    image: 'https://upload.wikimedia.org/wikipedia/en/f/f3/Poor_Things_poster.jpg',
+    image: '/posters/poor-things.jpg',
     synopsis: 'La historia de Bella Baxter, una mujer traída de vuelta a la vida por un científico poco convencional.',
     classification: 'R',
     rating: 7.9,
@@ -38,7 +38,7 @@ export const movies = [
   {
     id: 5,
     title: 'The Marvels',
-    image: 'https://upload.wikimedia.org/wikipedia/en/7/7a/The_Marvels_poster.jpg',
+    image: '/posters/the-marvels.jpg',
     synopsis: 'Carol Danvers, Kamala Khan y Monica Rambeau se unen cuando sus poderes se entrelazan inesperadamente.',
     classification: 'PG-13',
     rating: 6.2,
@@ -47,7 +47,7 @@ export const movies = [
   {
     id: 6,
     title: 'Barbie',
-    image: 'https://upload.wikimedia.org/wikipedia/en/0/0b/Barbie_2023_poster.jpg',
+    image: '/posters/barbie.jpg',
     synopsis: 'Barbie y Ken viven en Barbie Land, un lugar perfecto, hasta que un viaje al mundo real los cambia todo.',
     classification: 'PG-13',
     rating: 7.0,
@@ -56,7 +56,7 @@ export const movies = [
   {
     id: 7,
     title: 'John Wick 4',
-    image: 'https://upload.wikimedia.org/wikipedia/en/d/d0/John_Wick_-_Chapter_4_promotional_poster.jpg',
+    image: '/posters/john-wick-4.jpg',
     synopsis: 'John Wick continúa su lucha contra la Alta Mesa mientras nuevos enemigos aparecen en su camino.',
     classification: 'R',
     rating: 7.8,
@@ -65,7 +65,7 @@ export const movies = [
   {
     id: 8,
     title: 'Elemental',
-    image: 'https://upload.wikimedia.org/wikipedia/en/4/4d/Elemental_final_poster.jpg',
+    image: '/posters/elemental.jpg',
     synopsis: 'En una ciudad donde el fuego, el agua, el aire y la tierra conviven, una joven fogosa y un tipo acuático descubren algo en común.',
     classification: 'PG',
     rating: 7.1,

@@ -45,6 +45,8 @@ cartelera-cine/
 ├── vite.config.js              Configuración de Vite con el plugin de React
 ├── package.json                Dependencias y scripts del proyecto
 ├── ERRORES_TIPICOS.md          Registro de los tres errores de JSX provocados
+├── public/
+│   └── posters/                Portadas locales de las ocho películas
 └── src/
     ├── main.jsx                Renderiza <App /> e importa los estilos globales
     ├── App.jsx                 Compone Header, Hero, MovieList y Footer
@@ -99,7 +101,7 @@ Cada película del archivo `src/data/movies.js` tiene esta forma:
 {
   id: 1,                       // identificador único, usado como key
   title: 'Dune: Parte Dos',
-  image: 'https://...',        // URL del póster
+  image: '/posters/dune-parte-dos.jpg', // ruta local del póster
   synopsis: '...',             // resumen de la trama
   classification: 'PG-13',     // clasificación por edades
   rating: 8.4,                 // valoración
