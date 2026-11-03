@@ -253,6 +253,10 @@ img {
   color: var(--color-text);
 }
 
+.movie-list {
+  padding: 3rem 0;
+}
+
 .movie-list__grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -263,6 +267,108 @@ img {
 
 .movie-list__item {
   list-style: none;
+}
+
+/* ========================================
+   Header
+   ======================================== */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(11, 12, 16, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #22252c;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.logo__accent {
+  color: var(--color-accent);
+}
+
+.nav__list {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav__link {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: color var(--transition);
+}
+
+.nav__link:hover {
+  color: #ffffff;
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+
+.footer {
+  margin-top: 4rem;
+  padding: 3rem 0 1.5rem;
+  background-color: var(--color-surface);
+  border-top: 1px solid #22252c;
+}
+
+.footer__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer__text {
+  color: var(--color-text-muted);
+  max-width: 40ch;
+  margin-top: 0.75rem;
+  font-size: 0.9375rem;
+}
+
+.footer__title {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.footer__item {
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+}
+
+.footer__bottom {
+  padding-top: 1.5rem;
+  border-top: 1px solid #22252c;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
 }
 
 .visually-hidden {
