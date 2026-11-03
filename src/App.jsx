@@ -1,5 +1,12 @@
+import Header from './components/Header.jsx'
+
 function App() {
-  return <h1>Cine Plus - Cartelera</h1>
+  return (
+    <>
+      <Header />
+      <main>Contenido principal</main>
+    </>
+  )
 }
 
 export default App
